@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: web-container
-          image: ghcr.io/saiKumar0236/myfamily:latest
+          image: saikumarbandike/my-family:v1.0
           ports:
             - containerPort: 80
