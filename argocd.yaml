@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd        # ArgoCD must be installed in this namespace
+spec:
+  project: default          # Or another ArgoCD project name
+
+  source:
+    repoURL: https://github.com/<your-org-or-username>/<your-repo>.git
+    targetRevision: main         # Branch name (e.g., main/master)
+    path: path/to/k8s/yaml       # Path to your manifests (e.g., "manifests" or ".")
+
+  destination:
+    server: https://kubernetes.default.svc  # For in-cluster deployment
+    namespace: default                      # Namespace to deploy your app
+
+  syncPolicy:
+    automated:             # Automatically sync without manual approval
+      prune: true          # Remove resources not in Git
+      selfHeal: true       # Revert out-of-band changes
+    syncOptions:
+      - CreateNamespace=true    # Create namespace if it doesn’t exist
