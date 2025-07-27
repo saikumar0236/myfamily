@@ -19,3 +19,5 @@ spec:
           image: saikumarbandike/myfamily:latest
           ports:
             - containerPort: 80
+      imagePullSecrets:
+        - name: dockerhub-secret
