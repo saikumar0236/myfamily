@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: myfamily-container
-          image: docker.io/saikumarbandike/myfamily:latest
+          image: saikumarbandike/myfamily:latest
           ports:
             - containerPort: 80
