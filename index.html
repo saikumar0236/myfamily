@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the Bandike family – Dad, Mom, and two sons, displayed beautifully with a glassmorphism effect." />
+  <title>Bandike Family</title>
+  <style>
+    :root {
+      --card-bg: rgba(225, 186, 14, 0.582);
+      --card-hover-bg: rgba(23, 208, 63, 0.18);
+      --border-color: rgba(213, 19, 19, 0.18);
+      --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #c1b0b0;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 40px;
+      text-align: center;
+      text-shadow: var(--text-shadow);
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .family-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .glass-card {
+      width: 220px;
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: scale(1.05);
+      background: var(--card-hover-bg);
+    }
+
+    .glass-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid rgba(19, 145, 190, 0.175);
+      box-shadow: 0 4px 15px rgba(168, 8, 8, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .member-name {
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #0c0000;
+      text-shadow: var(--text-shadow);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .glass-card {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>👨‍👩‍👦‍👦 Meet the Bandike Family</h1>
+  <main>
+    <section class="family-container" aria-label="Family Members">
+      <div class="glass-card">
+        <a href="dad.html" aria-label="Learn more about Dad">
+          <img src="images/dad.jpg" alt="Sai Kumar, the father of the Bandike family">
+          <div class="member-name">Sai Kumar (Dad)</div>
+        </a>
+      </div>
+      <div class="glass-card">
+        <a href="mom.html" aria-label="Learn more about Mom">
+          <img src="images/mom.jpg" alt="Sujji, the mother of the Bandike family">
+          <div class="member-name">Sujji (Mom)</div>
+        </a>
+      </div>
+      <div class="glass-card">
+        <a href="son1.html" aria-label="Learn more about Son1">
+          <img src="images/son1.jpg" alt="Kiran, the first son of the Bandike family">
+          <div class="member-name">Kiran (Son1)</div>
+        </a>
+      </div>
+      <div class="glass-card">
+        <a href="son2.html" aria-label="Learn more about Son2">
+          <img src="images/son2.jpg" alt="Seshank, the second son of the Bandike family">
+          <div class="member-name">Seshank (Son2)</div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
