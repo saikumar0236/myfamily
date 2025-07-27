@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app
+  name: myfamily-app
   labels:
-    app: web-app
+    app: myfamily
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: web-app
+      app: myfamily
   template:
     metadata:
       labels:
-        app: web-app
+        app: myfamily
     spec:
       containers:
-        - name: web-container
-          image: saikumarbandike/my-family:v1.0
+        - name: myfamily-container
+          image: docker.io/saikumarbandike/myfamily:latest
           ports:
             - containerPort: 80
