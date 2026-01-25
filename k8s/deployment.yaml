@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: myfamily-container
-          image: saikumarbandike/myfamily:latest
+          image: saikumarbandike/myfamily:v1.0
           ports:
             - containerPort: 80
       imagePullSecrets:
